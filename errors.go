@@ -1,11 +1,9 @@
 package byteconv
 
-import (
-	"errorx"
-)
+import "errors"
 
 var (
-	nilArray  error = errorx.New("Warning", "Nil byte array", 0)
-	wrongSize error = errorx.New("Error", "Wrong size byte array", 1)
-	unsupType error = errorx.New("Error", "Unsupported type", 1)
+	nilArray  error = errors.New("Nil byte array")
+	wrongSize error = errors.New("Wrong size byte array")
+	unsupType error = errors.New("Unsupported type")
 )
